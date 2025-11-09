@@ -1,17 +1,82 @@
-# React + Vite
+# 🥗 PlateShare — Community Food Sharing Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 About the Project
 
-Currently, two official plugins are available:
+**PlateShare** is a community-driven food sharing platform built with the **MERN Stack** (MongoDB, Express.js, React, Node.js).  
+It allows users to donate surplus food, browse available items, and request food donations — reducing waste and promoting community support.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The platform features **secure Firebase authentication**, **CRUD operations**, and a **modern, responsive design** powered by TailwindCSS and DaisyUI.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Key Features
 
-## Expanding the ESLint configuration
+- 🥘 **Food Donation System:** Logged-in users can add, manage, update, and delete donated foods.  
+- 🍱 **Browse & Request Foods:** Anyone can view all available food donations and submit requests easily.  
+- 🔁 **Food Request Management:** Donors can accept or reject food requests directly from their dashboard.  
+- 🔐 **Firebase Authentication:** Email/password and Google login with protected private routes.  
+- 🗄️ **MongoDB Integration:** All food and request data are securely stored and managed via MongoDB Atlas.  
+- 💫 **Responsive & Animated UI:** Optimized for mobile, tablet, and desktop with AOS animations and smooth transitions.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚙️ Core Functionalities
+
+### 🏠 Home Page
+- Dynamic **Hero Section** with CTA ("View All Foods").
+- **Popular Foods Section:** Displays top 6 available foods.
+- **Two Informative Sections:** “How It Works” and “Our Mission”.
+- Entry animations using **AOS** or **Framer Motion**.
+
+### 👥 Authentication (Firebase)
+- User registration with **name, photo URL, email, and password validation**.
+- **Google Sign-In** integration.
+- Real-time **Notifications** for success/error feedback.
+- Redirects users to intended route after login.
+
+### 🍛 Food Management (CRUD)
+- **Add Food (Private):** Logged-in users can upload new food data (with imgbb image link).
+- **Available Foods (Public):** View all food donations with “Available” status.
+- **Food Details (Private):** Detailed view with “Request Now” form.
+- **Manage My Foods (Private):** Update or delete foods with confirmation alerts.
+
+### 📬 Food Request System
+- Users can **request food** with pickup location and reason.
+- Donors can **accept or reject** requests in real time.
+- When accepted, food status automatically changes to **“Donated”**.
+
+### 🧭 Additional Features
+- Protected routes using Firebase Auth state.
+- **React Hook Form** for advanced validation.
+- **SweetAlert2** for alerts and confirmations.
+- **404 Page** with a creative design and redirect to Home.
+- **Dynamic Page Titles** for better SEO and UX.
+- Environment variables (`.env`) for Firebase keys.
+
+---
+
+## 🧩 Technologies Used
+
+| Category | Tools & Libraries |
+|-----------|-------------------|
+| **Frontend** | React.js, React Router DOM, TanStack Query, Axios, React Hook Form |
+| **Backend** | Node.js, Express.js |
+| **Database** | MongoDB Atlas |
+| **Authentication** | Firebase (Email/Password + Google Sign-In) |
+| **Hosting** | Netlify / Surge (Client), Vercel (Server) |
+| **UI & Styling** | TailwindCSS, DaisyUI, SweetAlert2 |
+| **Image Hosting** | imgbb API |
+
+---
+
+
+**Live Site:** [Your Live URL Here]  
+**Client Repo:**  https://github.com/RayhanRK/plate-share-client.git
+**Server Repo:** 
+
+---
+## 👨‍💻 Author
+
+**Developer:** M. Rayhan Khan  
+**Project:** PlateShare — MERN Stack Food Sharing Platform  
 
