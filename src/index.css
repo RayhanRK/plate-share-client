@@ -3,7 +3,6 @@ body {
   font-family: 'inter', sans-serif;
 }
 
-
 @import "tailwindcss";
 @plugin "daisyui";
 @plugin "daisyui/theme" {
