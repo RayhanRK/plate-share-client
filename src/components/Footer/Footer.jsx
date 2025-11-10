@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="flex flex-col items-start">
           <div className="flex items-center">
             <img src={logo} alt="PlateShare Logo" className="w-15" />
-            <h1 className="text-2xl font-bold text-white">
+            <h1 className="text-2xl font-bold text-green-500">
               Plate<span className="text-primary">Share</span>
             </h1>
           </div>
@@ -30,25 +30,25 @@ const Footer = () => {
           <h2 className="font-semibold mb-6">Quick Links</h2>
           <ul className="space-y-3 text-gray-300">
             <li>
-              <a href="/" className="hover:text-white transition-colors">
+              <a href="/" className="hover:text-green-600 transition-colors">
                 Home
               </a>
             </li>
             <li>
-              <a href="/foods" className="hover:text-white transition-colors">
+              <a href="/foods" className="hover:text-green-600 transition-colors">
                 Available Foods
               </a>
             </li>
             <li>
               <a
                 href="/add-food"
-                className="hover:text-white transition-colors"
+                className="hover:text-green-600 transition-colors"
               >
                 Add Food
               </a>
             </li>
             <li>
-              <a href="/profile" className="hover:text-white transition-colors">
+              <a href="/profile" className="hover:text-green-600 transition-colors">
                 My Profile
               </a>
             </li>
@@ -60,22 +60,22 @@ const Footer = () => {
           <h2 className="font-semibold mb-6">Help & Support</h2>
           <ul className="space-y-3 text-gray-300">
             <li>
-              <a href="/faq" className="hover:text-white transition-colors">
+              <a href="/faq" className="hover:text-green-600 transition-colors">
                 FAQ
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-white transition-colors">
+              <a href="/contact" className="hover:text-green-600 transition-colors">
                 Contact Us
               </a>
             </li>
             <li>
-              <a href="/terms" className="hover:text-white transition-colors">
+              <a href="/terms" className="hover:text-green-600 transition-colors">
                 Terms of Service
               </a>
             </li>
             <li>
-              <a href="/privacy" className="hover:text-white transition-colors">
+              <a href="/privacy" className="hover:text-green-600 transition-colors">
                 Privacy Policy
               </a>
             </li>

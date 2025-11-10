@@ -35,7 +35,7 @@ const Navbar = () => {
               alt="PlateShare Logo"
               className="w-15 hidden md:block"
             />
-            <h1 className="text-2xl font-bold text-white">
+            <h1 className="text-2xl font-bold text-green-500">
               Plate<span className="text-primary">Share</span>
             </h1>
           </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
             ) : (
               <Link
                 to="/auth/login"
-                className="btn btn-primary text-white ml-10"
+                className="btn btn-primary text-white ml-10 px-6 hover:bg-green-500 rounded-md"
               >
                 Login
               </Link>
