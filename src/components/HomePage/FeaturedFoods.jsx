@@ -3,7 +3,7 @@ import React from 'react';
 const FeaturedFoods = () => {
     return (
         <div>
-            FeaturedFoods
+          from  FeaturedFoods section
         </div>
     );
 };
