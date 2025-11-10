@@ -14,7 +14,7 @@ const Hero = () => {
         
 <Link
   to="/foods"
-  className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-primary hover:bg-green-500 text-white font-semibold rounded-lg text-base sm:text-lg md:text-xl transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-lg"
+  className="inline-block px-4 sm:px-8 py-3 sm:py-4 bg-primary hover:bg-green-500 text-white font-semibold rounded-lg text-base sm:text-lg md:text-xl transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-lg"
 >
   View All Foods
 </Link>
