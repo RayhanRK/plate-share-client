@@ -3,8 +3,8 @@
 ## 📖 About the Project
 
 **PlateShare** is a community-driven food sharing platform built with the **MERN Stack** (MongoDB, Express.js, React, Node.js).  
-It allows users to donate surplus food, browse available items, and request food donations — reducing waste and promoting community support.
 
+It allows users to donate surplus food, browse available items, and request food donations — reducing waste and promoting community support.
 The platform features **secure Firebase authentication**, **CRUD operations**, and a **modern, responsive design** powered by TailwindCSS and DaisyUI.
 
 ---
@@ -16,7 +16,7 @@ The platform features **secure Firebase authentication**, **CRUD operations**, a
 - 🔁 **Food Request Management:** Donors can accept or reject food requests directly from their dashboard.  
 - 🔐 **Firebase Authentication:** Email/password and Google login with protected private routes.  
 - 🗄️ **MongoDB Integration:** All food and request data are securely stored and managed via MongoDB Atlas.  
-- 💫 **Responsive & Animated UI:** Optimized for mobile, tablet, and desktop with AOS animations and smooth transitions.
+- 💫 **Responsive & Animated UI:** Optimized for mobile, tablet, and desktop with smooth transitions.
 
 ---
 
@@ -26,7 +26,7 @@ The platform features **secure Firebase authentication**, **CRUD operations**, a
 - Dynamic **Hero Section** with CTA ("View All Foods").
 - **Popular Foods Section:** Displays top 6 available foods.
 - **Two Informative Sections:** “How It Works” and “Our Mission”.
-- Entry animations using **AOS** or **Framer Motion**.
+
 
 ### 👥 Authentication (Firebase)
 - User registration with **name, photo URL, email, and password validation**.
@@ -72,6 +72,7 @@ The platform features **secure Firebase authentication**, **CRUD operations**, a
 
 **Live Site:** [Your Live URL Here]  
 **Client Repo:**  https://github.com/RayhanRK/plate-share-client.git
+
 **Server Repo:** 
 
 ---
