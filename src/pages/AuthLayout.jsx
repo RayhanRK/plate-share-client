@@ -1,29 +1,32 @@
 import React, { useEffect } from 'react';
 import { Outlet } from 'react-router';
-// import authBackground from '../assets/Hero-Image.png';
+import authBackground from '../assets/foodShareIllustration.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Toaster } from 'react-hot-toast';
+
 const AuthLayout = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
   }, []);
+
   return (
     <div
-      className=" min-h-screen relative"
+      className="min-h-screen relative"
       style={{
-        // background: `url(${authBackground})`,
+        background: `url(${authBackground})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60"></div>
+      {/* Optional: light transparent overlay */}
+      <div className="absolute inset-0 bg-white/20"></div>
 
-      <div data-aos="fade-up" data-aos-duration="2000">
-        <Outlet></Outlet>
+      <div data-aos="fade-up" data-aos-duration="2000" className="relative z-10">
+        <Outlet />
       </div>
+
       <Toaster />
     </div>
   );
