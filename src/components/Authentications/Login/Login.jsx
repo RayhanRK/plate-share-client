@@ -56,7 +56,7 @@ const Login = () => {
 
   return (
     <section className="container mx-auto max-w-2xl min-h-screen py-10 px-4">
-      <div className="p-7 md:p-10 bg-white rounded-lg shadow-lg">
+      <div className="p-7 md:p-10 bg-white/90  rounded-lg shadow-lg">
         <h2 className="text-3xl font-semibold text-primary mb-8 text-center">
           Login
         </h2>
