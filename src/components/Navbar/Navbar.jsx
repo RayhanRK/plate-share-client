@@ -11,19 +11,19 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const navigate = useNavigate();
-  // if (loading) return <span>Loading...</span>;
 
   const handleLogout = async () => {
     try {
-      const result = await userLogout();
+      await userLogout();
       setDropdownOpen(false);
       toast.success('Logout success');
       navigate('/');
     } catch (error) {
-      toast.error('Registration failed');
       console.error(error);
     }
   };
+ if (loading) return <span className="">..</span>;
+
   return (
     <nav className="bg-[#1E3A1E] shadow py-2 lg:py-4">
       <div className="container mx-auto px-4 ">
