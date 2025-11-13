@@ -35,7 +35,7 @@ const FeaturedFoods = ({ featuredFoods }) => {
           <Card />
           <Card />           */}
           
-          {featuredFoods.map((food) => (
+          {featuredFoods?.map((food) => (
             <Card key={food._id} food={food} />
           ))}
         </div>
