@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom';
 
 const Card = ({ food = {} }) => {
   // Destructure fields safely, using defaults if missing
+  
   const {
-    donator_email = 'N/A',
-    donator_image = 'https://via.placeholder.com/50',
-    donator_name = 'Unknown',
-    expire_date = 'N/A',
-    food_image: food_img_thumb = 'https://via.placeholder.com/400x200',
-    food_name = 'Unnamed Food',
-    food_quantity = '1',
-    food_status = 'Unknown',
+    donator_email ,
+    donator_image,
+    donator_name,
+    expire_date,
+    food_image,
+    food_name,
+    food_quantity,
+    food_status,
     _id,
   } = food;
 
@@ -22,7 +23,7 @@ const Card = ({ food = {} }) => {
     <div className="card bg-base-100 max-w-110 shadow-lg hover:shadow-xl hover:-translate-y-1.5 transition duration-200">
       <div className="w-full h-56 overflow-hidden rounded-t-md">
         <img
-          src={food_img_thumb}
+          src={food_image}
           alt={food_name}
           className="object-cover w-full"
           loading="lazy"

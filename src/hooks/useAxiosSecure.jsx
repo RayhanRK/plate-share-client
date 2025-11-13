@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router';
 import useAuth from './useAuth';
 
 const instance = axios.create({
-  baseURL: 'https://plate-share-server-2sntoul6o-rayhan-khans-projects-3d98a82c.vercel.app/api', 
+  baseURL: 'https://plate-share-server-ver2.vercel.app/api', 
 });
 
 const useAxiosSecure = () => {

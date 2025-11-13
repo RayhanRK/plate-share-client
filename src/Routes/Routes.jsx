@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
         Component: Home,
         loader: async () =>
           await fetch(
-             'https://plate-share-server-2sntoul6o-rayhan-khans-projects-3d98a82c.vercel.app/api/featured-foods'
+             'https://plate-share-server-ver2.vercel.app/api/featured-foods'
           ).then(res => res.json()),
       },
       {
@@ -37,7 +37,7 @@ export const router = createBrowserRouter([
 
         loader: async () => {
           const res = await fetch(
-               'https://plate-share-server-2sntoul6o-rayhan-khans-projects-3d98a82c.vercel.app/api/foods/availables'
+               'https://plate-share-server-ver2.vercel.app/api/foods/availables'
           );
           if (!res.ok) throw new Error('Failed to fetch foods');
           return res.json();
