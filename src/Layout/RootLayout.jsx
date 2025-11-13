@@ -6,7 +6,7 @@ import { Toaster } from "react-hot-toast";
 
 const RootLayout = () => {
   return (
-    <div>
+    <div >
       <Navbar />
       <main className="min-h-screen">
         <Outlet />

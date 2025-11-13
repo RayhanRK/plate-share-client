@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Outlet } from 'react-router';
-import authBackground from '../assets/foodShareIllustration.jpg';
+import fsBG from '../assets/foodShareIllustration.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Toaster } from 'react-hot-toast';
@@ -14,14 +14,14 @@ const AuthLayout = () => {
     <div
       className="min-h-screen relative"
       style={{
-        background: `url(${authBackground})`,
+        background: `url(${fsBG})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-      {/* Optional: light transparent overlay */}
-      <div className="absolute inset-0 bg-white/20"></div>
+      {/* transparent overlay */}
+      <div className="absolute inset-0 bg-black/20"></div>
 
       <div data-aos="fade-up" data-aos-duration="2000" className="relative z-10">
         <Outlet />

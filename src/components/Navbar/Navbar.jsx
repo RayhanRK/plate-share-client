@@ -5,6 +5,7 @@ import { TiThMenu } from 'react-icons/ti';
 import { IoClose } from 'react-icons/io5';
 import toast from 'react-hot-toast';
 import useAuth from '../../hooks/useAuth';
+import Loader from '../Loader/Loader';
 
 const Navbar = () => {
   const { user, loading, userLogout } = useAuth();
@@ -22,11 +23,11 @@ const Navbar = () => {
       console.error(error);
     }
   };
- if (loading) return <span className="">..</span>;
+//  if (loading) return  <Loader />;
 
   return (
-    <nav className="bg-[#1E3A1E] shadow py-2 lg:py-4">
-      <div className="container mx-auto px-4 ">
+    <nav className="bg-[#1E3A1E] shadow py-2 lg:py-4 ">
+      <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to={'/'} className="flex items-center">
@@ -41,7 +42,7 @@ const Navbar = () => {
           </Link>
 
           {/* Menu */}
-          <div className="items-center gap-10 hidden md:flex">
+          <div className="items-center gap-10 hidden md:flex isActive">
             <NavLink className="text-white" to="/">Home</NavLink>
             <NavLink className="text-white" to="/available-foods">Available Foods</NavLink>
 
@@ -68,16 +69,18 @@ const Navbar = () => {
                     <li onClick={() => setDropdownOpen(false)}>
                       <Link to={'/add-food'}>Add Food</Link>
                     </li>
-                    <li>
+
+                    <li onClick={() => setDropdownOpen(false)}>
                       <Link to={'/manage-foods'}>Manage My Foods</Link>
                     </li>
-                    <li>
+
+                    <li onClick={() => setDropdownOpen(false)}>
                       <Link to={'/my-food-requests'}>My Food Requests</Link>
                     </li>
                     <li className="mt-8">
                       <button
                         onClick={handleLogout}
-                        className="btn btn-neutral w-full"
+                        className="btn btn-primary w-full"
                       >
                         Logout
                       </button>
@@ -87,12 +90,13 @@ const Navbar = () => {
               </div>
             ) : (
               <Link
-                to="/auth/login"
+                to="/login"
                 className="btn btn-primary text-white ml-10 px-6 hover:bg-green-500 rounded-md"
               >
                 Login
               </Link>
             )}
+
           </div>
 
           {/* Mobile Menu */}
@@ -117,17 +121,26 @@ const Navbar = () => {
               {user ? (
                 <div className="avatar cursor-pointer absolute top-5">
                   <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
-                    <img src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" />
+                  
+                   <img src={
+                     user?.photoURL
+                      ? user?.photoURL
+                    : "https://img.daisyui.com/images/profile/demo/spiderperson@192.webp"
+
+                    }/>
+                  
                   </div>
                 </div>
               ) : (
-                <Link to="/auth/login" className="btn btn-primary text-white">
+                <Link to="/login" className="btn btn-primary text-white">
                   Login
                 </Link>
               )}
 
               <div className="">
                 <ul className="space-y-5">
+                  {user && (
+                  <>
                   <li>
                     <Link to={'/add-food'}>Add Food</Link>
                   </li>
@@ -140,11 +153,13 @@ const Navbar = () => {
                   <li className="mt-8">
                     <button
                       onClick={handleLogout}
-                      className="btn btn-neutral w-full"
+                      className="btn btn-primary w-full"
                     >
                       Logout
                     </button>
                   </li>
+                  </> 
+                  )}
                 </ul>
               </div>
             </div>

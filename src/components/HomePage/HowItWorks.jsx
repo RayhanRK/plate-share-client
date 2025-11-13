@@ -1,4 +1,4 @@
-import { FaUtensils, FaSearch, FaHandHoldingHeart } from "react-icons/fa";
+import { FaSearch, FaHandHoldingHeart } from "react-icons/fa";
 import { PiBowlFoodBold } from "react-icons/pi";
 import AOS from "aos";
 import "aos/dist/aos.css";

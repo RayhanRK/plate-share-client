@@ -92,7 +92,7 @@ const AddFood = () => {
 
   return (
     <div className="py-15 container mx-auto ">
-      <h2 className="text-3xl md:text-5xl font-semibold mb-4 text-center">
+      <h2 className="text-3xl md:text-5xl font-semibold mb-4 text-accent text-center">
         Add your <span className="text-primary">Food</span>
       </h2>
       <div className="bg-white max-w-2xl mx-3 md:mx-auto border border-neutral-300 rounded-md shadow-md my-8 p-4 md:p-6">
