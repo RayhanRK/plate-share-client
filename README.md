@@ -70,10 +70,10 @@ The platform features **secure Firebase authentication**, **CRUD operations**, a
 ---
 
 
-**Live Site:** [Your Live URL Here]  
+**Live Site:** https://plate-share-client2.vercel.app/
 **Client Repo:**  https://github.com/RayhanRK/plate-share-client.git
 
-**Server Repo:** 
+**Server Repo:** https://github.com/RayhanRK/plate-share-server
 
 ---
 ## 👨‍💻 Author
