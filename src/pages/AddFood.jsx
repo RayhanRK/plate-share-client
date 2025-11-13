@@ -10,6 +10,7 @@ const AddFood = () => {
   const [url, setUrl] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  
   const handleImageUpload = async () => {
     if (!image) {
       toast.error('Please upload an image');
