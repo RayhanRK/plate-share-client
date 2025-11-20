@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Card = ({ food = {} }) => {
-  // Destructure fields safely, using defaults if missing
-  
+const Card = ({ food = {} }) => {  
   const {
+    location,
     donator_email ,
     donator_image,
     donator_name,
@@ -15,9 +14,6 @@ const Card = ({ food = {} }) => {
     food_status,
     _id,
   } = food;
-
-  // Optional: skip rendering if the food object is empty
-  if (!food_name) return null;
 
   return (
     <div className="card bg-base-100 max-w-110 shadow-lg hover:shadow-xl hover:-translate-y-1.5 transition duration-200">
@@ -33,11 +29,12 @@ const Card = ({ food = {} }) => {
         <h2 className="card-title line-clamp-1">{food_name}</h2>
         <div className="flex items-center gap-5">
           <p className="badge badge-md badge-success">{food_status}</p>
-          <p className="font-semibold">Expire Date: {expire_date}</p>
+          <p className="font-semibold">{expire_date}</p>
         </div>
         <p className="font-semibold text-center mt-2">
           Serves {food_quantity} {food_quantity < 1 ? 'People' : "People's"}{' '}
         </p>
+        <p>Pickup Location: {location}</p>
         <div className="shadow border rounded-md border-neutral-300 p-3 flex justify-between items-center">
           <div>
             <p className="font-semibold">{donator_name}</p>

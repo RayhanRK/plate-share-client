@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router';
 import useAuth from './useAuth';
 
 const instance = axios.create({
+  //vercel server link
   baseURL: 'https://plate-share-server-ver2.vercel.app/api', 
 });
 

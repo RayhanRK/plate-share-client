@@ -7,7 +7,6 @@ import 'aos/dist/aos.css';
 
 const FeaturedFoods = ({ featuredFoods }) => {
   // console.log(featuredFoods);
-
   useEffect(() => {
     AOS.init({ duration: 1000, easing: "ease-in-out", once: true });
   }, []);
@@ -27,15 +26,8 @@ const FeaturedFoods = ({ featuredFoods }) => {
         </div>
 
         {/* Foods */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-20 mb-10">
-          {/* <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />           */}
-          
-          {featuredFoods?.map((food) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-20 mb-10">   
+          {featuredFoods.map((food) => (
             <Card key={food._id} food={food} />
           ))}
         </div>

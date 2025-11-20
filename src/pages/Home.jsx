@@ -13,7 +13,6 @@ const Home = () => {
             <FeaturedFoods featuredFoods={featuredFoods}/>
             <HowItWorks />
             <OurMission />
-
         </div>
     );
 };

@@ -56,6 +56,7 @@ const Register = () => {
         name: user?.displayName,
       };
       const res = await fetch(
+        //here vercel serverside link
          'https://plate-share-server-2sntoul6o-rayhan-khans-projects-3d98a82c.vercel.app/api/users',
         {
           method: 'POST',
@@ -186,12 +187,14 @@ const Register = () => {
           </Link>
         </div>
       </div>
-      <div className="text-center">
+
+      {/* <div className="text-center">
         <Link to="/" className="mt-5 btn btn-primary border-0 text-white">
           <TbArrowBackUp />
           Go to home
         </Link>
-      </div>
+      </div> */}
+
     </section>
   );
 };

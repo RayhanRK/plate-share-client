@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import useAuth from '../hooks/useAuth';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router';
+import useAxiosSecure from '../hooks/useAxiosSecure';
 
 const AddFood = () => {
   const { user } = useAuth();
@@ -10,7 +11,8 @@ const AddFood = () => {
   const [url, setUrl] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  
+  const axiosSecure = useAxiosSecure();
+
   const handleImageUpload = async () => {
     if (!image) {
       toast.error('Please upload an image');
@@ -24,7 +26,7 @@ const AddFood = () => {
       setLoading(true);
       const res = await fetch(
         `https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_IMGBB_API}`,
-        { method: 'POST', body: formData }
+        { method: 'POST', body: formData },
       );
 
       if (!res.ok) throw new Error(`Image upload failed`);
@@ -71,20 +73,15 @@ const AddFood = () => {
     };
 
     try {
-      const res = await fetch('http://localhost:5100/api/foods', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newFood),
+      axiosSecure.post('/foods', newFood).then(data => {
+        const result = data.data;
+        if (result.acknowledged && result.insertedId) {
+          toast.success('Food added successfully');
+          navigate('/');
+        } else {
+          toast.error('Failed to add food');
+        }
       });
-
-      const result = await res.json();
-
-      if (result.acknowledged && result.insertedId) {
-        toast.success('Food added successfully');
-        navigate('/');
-      } else {
-        toast.error('Failed to add food');
-      }
     } catch (err) {
       console.error(err);
       toast.error('Something went wrong');
