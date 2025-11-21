@@ -70,7 +70,7 @@ The platform features **secure Firebase authentication**, **CRUD operations**, a
 ---
 
 
-**Live Site:** https://plate-share-client2.vercel.app/
+**Live Site:** https://plate-share-web1.netlify.app/
 **Client Repo:**  https://github.com/RayhanRK/plate-share-client.git
 
 **Server Repo:** https://github.com/RayhanRK/plate-share-server
