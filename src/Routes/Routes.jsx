@@ -14,29 +14,33 @@ import MyFood from '../pages/MyFood';
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <RootLayout />,
+    element: <RootLayout></RootLayout>,
     errorElement: <Error404 />,
 
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <Home></Home>,
         loader: async () =>
           fetch(
-            "https://plate-share-server-ver2.vercel.app/api/featured-foods"
+            "https://plate-share2.vercel.app/api/featured-foods"
           ).then(res => res.json()),
+      },
+     {
+        path: '/',
+        Component: Home,
       },
 
       {
         path: "/available-foods",
-        element: <AvailableFoods />,
         loader: async () => {
           const res = await fetch(
-            "https://plate-share-server-ver2.vercel.app/api/foods/availables"
+            "https://plate-share2.vercel.app/api/foods/availables"
           );
           if (!res.ok) throw new Error("Failed to fetch foods");
           return res.json();
         },
+        Component: AvailableFoods,
       },
 
       {
@@ -75,8 +79,8 @@ export const router = createBrowserRouter([
         ),
       },
 
-      { path: "/register", element: <Register /> },
-      { path: "/login", element: <Login /> },
+      { path: "/register", Component: Register, },
+      { path: "/login", Component: Login, },
     ],
   },
 ]);

@@ -11,8 +11,9 @@ createRoot(document.getElementById('root')).render(
     <AuthProvider>
       <RouterProvider 
         router={router}
-        fallbackElement={<Loader />} 
-        HydrateFallback={<Loader />}
+        // fallbackElement={<Loader />} 
+        // HydrateFallback={<Loader />}
+
       />
     </AuthProvider>
   </StrictMode>

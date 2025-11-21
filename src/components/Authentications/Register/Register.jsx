@@ -57,7 +57,7 @@ const Register = () => {
       };
       const res = await fetch(
         //here vercel serverside link
-         'https://plate-share-server-2sntoul6o-rayhan-khans-projects-3d98a82c.vercel.app/api/users',
+         'https://plate-share2.vercel.app/api/users',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
