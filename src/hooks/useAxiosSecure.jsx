@@ -5,7 +5,7 @@ import useAuth from './useAuth';
 
 const instance = axios.create({
   //vercel server link
-  baseURL: 'https://plate-share-server1.vercel.app/api', 
+  baseURL: 'https://plate-share2.vercel.app/api', 
 });
 
 const useAxiosSecure = () => {
